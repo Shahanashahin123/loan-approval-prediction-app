@@ -72,6 +72,7 @@ Then open your browser and go to:
 )
 
 ### Prediction Result
-![Prediction Result](screenshots/result.png)
+![Prediction Result](![Screenshot 2025-06-21 194203](https://github.com/user-attachments/assets/8a078e6f-b472-4238-8ad9-039a56903a9d)
+)
 
 
