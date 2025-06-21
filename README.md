@@ -24,3 +24,45 @@ This project uses a trained ML model to analyze user-submitted data and determin
 
 ## 🏗️ Project Structure
 
+loan-approval-prediction-app/
+├── backend/
+│ ├── app.py
+│ ├── train_model.py
+│ ├── model.pkl
+│ ├── scaler.pkl
+├── frontend/
+│ ├── index.html
+│ └── styles.css
+├── data/
+│ └── loan_data.csv
+├── .gitignore
+├── requirements.txt
+└── README.md
+
+---
+
+## 🛠️ How to Run the App
+
+### 1. 🔧 Setup Environment
+
+python -m venv venv
+venv\Scripts\activate   # For Windows
+pip install -r requirements.txt
+
+##2. 📈 Train the Model
+
+python backend/train_model.py
+This will generate:
+
+model.pkl
+
+scaler.pkl
+
+3. 🚀 Run the App
+
+python backend/app.py
+Then open your browser and go to:
+
+👉 http://localhost:8000
+
+
