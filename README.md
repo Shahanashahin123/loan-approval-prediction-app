@@ -65,4 +65,13 @@ Then open your browser and go to:
 
 👉 http://localhost:8000
 
+## 🖼️ Screenshots
+
+### Home Page
+![Home Page](s![Screenshot 2025-06-21 194233](https://github.com/user-attachments/assets/91cf66e2-17b9-4b8d-ae87-e10dc404605a)
+)
+
+### Prediction Result
+![Prediction Result](screenshots/result.png)
+
 
