@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Prediction App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h2>Loan Prediction Form</h2>
+    <form id="loanForm">
+      <label>No. of Dependents:</label>
+      <input type="number" name="no_of_dependents" required />
+
+      <label>Education:</label>
+      <select name="education" required>
+        <option value="Graduate">Graduate</option>
+        <option value="Not Graduate">Not Graduate</option>
+      </select>
+
+      <label>Self Employed:</label>
+      <select name="self_employed" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Income:</label>
+      <input type="number" name="income_annum" required />
+
+      <label>Loan Amount:</label>
+      <input type="number" name="loan_amount" required />
+
+      <label>Loan Term (in years):</label>
+      <input type="number" name="loan_term" required />
+
+      <label>CIBIL Score:</label>
+      <input type="number" name="cibil_score" required />
+
+      <label>Residential Assets Value:</label>
+      <input type="number" name="residential_assets_value" required />
+
+      <label>Commercial Assets Value:</label>
+      <input type="number" name="commercial_assets_value" required />
+
+      <label>Luxury Assets Value:</label>
+      <input type="number" name="luxury_assets_value" required />
+
+      <label>Bank Asset Value:</label>
+      <input type="number" name="bank_asset_value" required />
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="error"></div>
+  </div>
+
+  <script>
+    document.getElementById('loanForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const params = new URLSearchParams();
+
+      for (const pair of formData.entries()) {
+        params.append(pair[0], pair[1]);
+      }
+
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/predict/?' + params.toString());
+        if (!response.ok) throw new Error("Server error");
+
+        const data = await response.json();
+        document.getElementById('error').innerText = '';
+        document.getElementById('result').innerText =
+          data.loan_status === 1 ? '✅ Loan Approved' : '❌ Loan Rejected';
+        document.getElementById('result').style.color = data.loan_status === 1 ? 'green' : 'red';
+      } catch (err) {
+        document.getElementById('result').innerText = '';
+        document.getElementById('error').innerText = '⚠️ Error: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
