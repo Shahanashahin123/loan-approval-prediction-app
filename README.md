@@ -49,7 +49,7 @@ python -m venv venv
 venv\Scripts\activate   # For Windows
 pip install -r requirements.txt
 
-##2. 📈 Train the Model
+### 2. 📈 Train the Model
 
 python backend/train_model.py
 This will generate:
@@ -58,21 +58,21 @@ model.pkl
 
 scaler.pkl
 
-3. 🚀 Run the App
+### 3. 🚀 Run the App
 
 python backend/app.py
 Then open your browser and go to:
 
 👉 http://localhost:8000
 
-## 🖼️ Screenshots
+### 🖼️ Screenshots
 
 ### Home Page
-![Home Page]                              (s![Screenshot 2025-06-21 194233](https://github.com/user-attachments/assets/91cf66e2-17b9-4b8d-ae87-e10dc404605a)
+[Home Page]                              (s![Screenshot 2025-06-21 194233](https://github.com/user-attachments/assets/91cf66e2-17b9-4b8d-ae87-e10dc404605a)
 )
 
 ### Prediction Result
-![Prediction Result]                      (![Screenshot 2025-06-21 194203](https://github.com/user-attachments/assets/8a078e6f-b472-4238-8ad9-039a56903a9d)
+[Prediction Result]                      (![Screenshot 2025-06-21 194203](https://github.com/user-attachments/assets/8a078e6f-b472-4238-8ad9-039a56903a9d)
 )
 
 
