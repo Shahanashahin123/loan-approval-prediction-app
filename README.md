@@ -1,4 +1,4 @@
-Loan Approval Prediction System
+**Loan Approval Prediction System**
 Overview
 
 A machine learning–based application that predicts the likelihood of loan approval using applicant and financial data. The project demonstrates data preprocessing, predictive modeling, and translating model outputs into actionable insights for decision-making.
