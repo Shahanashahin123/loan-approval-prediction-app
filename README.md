@@ -37,5 +37,6 @@ Identified important factors such as income, credit history, and loan amount
 Demonstrated practical application of machine learning in finance
 
 Author
+
 Shahana Shahin
 
